@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="CSS/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  <!-- Export JS  -->
+  <script>
+    (function () {
+      $(document).on('pageinit', '#home', function () {
+        $('#red_btn').on('click', function () {
+          $('#red_text').css({
+            'background': 'red'
+          });
+          $('#green_text').css({
+            'background': '#ccc'
+          });
+          $('#blue_text').css({
+            'background': '#ccc'
+          });
+        });
+        $('#green_btn').on('click', function () {
+          $('#red_text').css({
+            'background': '#ccc'
+          });
+          $('#green_text').css({
+            'background': 'green'
+          });
+          $('#blue_text').css({
+            'background': '#ccc'
+          });
+        });
+        $('#blue_btn').on('click', function () {
+          $('#red_text').css({
+            'background': '#ccc'
+          });
+          $('#green_text').css({
+            'background': '#ccc'
+          });
+          $('#blue_text').css({
+            'background': 'blue'
+          });
+        });
+      });
+    })();
+  </script>
+  <title>ChangeTextBackground</title>
+</head>
+
+<body>
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+    <div role="main" class="ui-content">
+      <a class="ui-btn" id="red_btn">red</a>
+      <a class="ui-btn" id="green_btn">green</a>
+      <a class="ui-btn" id="blue_btn">blue</a>
+      <div id="red_text" style="font-size:30px; background:#ccc;">red</div>
+      <div id="green_text" style="font-size:30px; background:#ccc;">green</div>
+      <div id="blue_text" style="font-size:30px; background:#ccc;">blue</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

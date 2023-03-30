@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="http://jqmdesigner.appspot.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  <!-- Export JS  -->
+  <script>
+    (function () {
+      $(document).on('pageinit', '#home', function () {
+        $('#div_width').on('change', function () {
+          $('#box').css({
+            'width': $('#div_width').val() + 'px'
+          });
+        });
+        $('#div_height').on('change', function () {
+          $('#box').css({
+            'height': $('#div_height').val() + 'px'
+          });
+        });
+      });
+    })();
+  </script>
+  <title>ScaleBox</title>
+</head>
+
+<body>
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+    <div role="main" class="ui-content">
+      <div class="ui-field-contain">
+        <label for="div_width">寬度</label>
+        <input id="div_width" value="100" min="50" max="200" type="range">
+      </div>
+      <div class="ui-field-contain">
+        <label for="div_height">高度</label>
+        <input id="div_height" value="100" min="50" max="200" type="range">
+      </div>
+      <div id="box" style=" width:100px; height:100px; background:#09c; margin:10px auto;"></div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link href="http://jqmdesigner.appspot.com/gk/lib/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Uncomment the following to include cordova in your android project -->
+  <!--<script src="http://jqmdesigner.appspot.com/platforms/android/cordova.js"></script>-->
+  <!-- Export JS  -->
+  <script>
+    (function () {
+      $(document).on('pageinit', '#home', function () {
+        var color_name;
+        $('#red_btn').on('click', function () {
+          color_name = $('#red_btn').html();
+          $('#text_area').html(color_name);
+          $('#text_area').css({
+            'color': color_name
+          });
+        });
+        $('#green_btn').on('click', function () {
+          color_name = $('#green_btn').html();
+          $('#text_area').html(color_name);
+          $('#text_area').css({
+            'color': color_name
+          });
+        });
+        $('#blue_btn').on('click', function () {
+          color_name = $('#blue_btn').html();
+          $('#text_area').html(color_name);
+          $('#text_area').css({
+            'color': color_name
+          });
+        });
+      });
+    })();
+  </script>
+  <title>ChangeTextColor</title>
+</head>
+
+<body>
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+    <div role="main" class="ui-content">
+      <a class="ui-btn" id="red_btn">red</a>
+      <a class="ui-btn" id="green_btn">green</a>
+      <a class="ui-btn" id="blue_btn">blue</a>
+      <div id="text_area" style="font-size:60px;"></div>
+    </div>
+  </div>
+</body>
+
+</html>
+
