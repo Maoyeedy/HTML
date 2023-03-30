@@ -1,0 +1,150 @@
+body {
+  font-family: "JetBrains Mono", monospace;
+  background-color: whitesmoke;
+}
+
+h1 {
+  color: darkslateblue;
+  margin-left: 15%;
+}
+
+p {
+  color: blueviolet;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 10px solid black;
+}
+
+.h1-link {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #db1e1e;
+  text-align: center;
+}
+
+.image-container {
+  max-width: 70%;
+  margin: 0 auto;
+  margin: auto auto;
+}
+
+.centered {
+  display: block;
+  text-align: center;
+}
+
+.list {
+  margin-left: 15%;
+}
+
+.mark {
+  margin-left: 15%;
+  border: 1.5px;
+  border-style: dashed;
+  border-color: blueviolet;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+table {
+  margin: auto auto;
+  border-color: blueviolet;
+}
+
+table:hover {
+  transition: background 2s, width 2s, box-shadow 2s, opacity 2s;
+  width: 70%;
+  background: blueviolet;
+  cursor: wait;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+}
+
+table:not(:hover) {
+  transition: background 1.25s, width 1.25s, box-shadow 1.25s, opacity 1.25s;
+  width: 90%;
+}
+
+.square {
+  width: 10vw;
+  height: 10vw;
+  animation: myAnimation 1.5s ease-in-out infinite alternate;
+}
+
+.circle {
+  background-color: #db1e1e;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes myAnimation {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+    background-color: blueviolet;
+  }
+
+  100% {
+    transform: translateX(950%) translateY(950%);
+    background-color: violet;
+  }
+}
+
+/* @keyframes myAnimation {
+  0% {
+    margin-top: 0px;
+    margin-left: 0px;
+    background-color: blueviolet;
+  }
+
+  100% {
+    margin-top: 250px;
+    margin-left: 250px;
+    background-color: violet;
+  }
+} */
+
+@-webkit-keyframes myAnimation {
+  0% {
+    margin-top: 0px;
+    background-color: yellow;
+  }
+
+  50% {
+    margin-top: 50px;
+    background-color: red;
+  }
+
+  100% {
+    margin-top: 100px;
+    background-color: blue;
+  }
+}
+
+.circle {
+  width: 5vw;
+  height: 5vw;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit 4s linear infinite;
+}
+
+@keyframes orbit {
+  from {
+    background-color: red;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(20vw) translateY(0);
+  }
+
+  to {
+    background-color: yellow;
+    transform: translate(-50%, -50%) rotate(360deg) translateX(20vw) translateY(0);
+  }
+}
