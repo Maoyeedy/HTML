@@ -1,0 +1,93 @@
+body {
+    height: 500vh;
+    margin: 0;
+    background-color: hsl(208, 95%, 75%);
+    background: linear-gradient(to bottom, hsl(208, 90%, 85%), hsl(208, 100%, 75%));
+}
+
+#parachute {
+    position: fixed;
+    transform-origin: top;
+    animation: moveParachute 240s linear infinite alternate paused;
+}
+
+#parachute img {
+    transform: scale(0.5);
+}
+
+#clickme {
+    font-family: sans-serif;
+    font-size: 1.25em;
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    position: absolute;
+    top: 68.5%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@keyframes moveParachute {
+    0% {
+        left: -10%;
+        top: -10%;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        left: 19%;
+        top: -50%;
+        transform: scale(1) rotate(8deg);
+    }
+
+    100% {
+        left: 48%;
+        top: -20%;
+        transform: scale(1.2) rotate(-8deg);
+    }
+}
+
+#cloud1 {
+    animation: moveLeft 90s linear infinite alternate;
+    transform: translateX(-25%);
+    opacity: 85%;
+}
+
+#cloud2 {
+    animation: moveRight 80s linear infinite alternate;
+    transform: translateX(0%);
+    opacity: 87.5%;
+}
+
+#cloud3 {
+    animation: moveLeft 70s linear infinite alternate;
+    transform: translateX(10%);
+    opacity: 90%;
+}
+
+#cloud4 {
+    animation: moveRight 60s linear infinite alternate;
+    transform: translateX(-10%);
+    opacity: 92.5%;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(-25%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+}
