@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div>
         <button id="reset-button">Reset</button>
         <p>背景顏色</p>
         <button id="red-background" class="red">Red</button>
@@ -23,16 +23,17 @@
         <button id="blue-button" class="blue">Blue</button>
         <button id="green-button" class="green">Green</button>
         <p>調節字體大小</p>
-        <div class="slider-container">
-            <input type="range" min="0.75" max="1.5" step="0.05" value="0.6" class="slider" id="font-slider">
-        </div>
+        <input type="range" min="0.6" max="1.2" step="0.05" value="0.6" class="slider" id="font-slider">
         <p id="slider-text">Lorem
-            ipsum是指一篇用于网页设计、排印、布局和印刷的伪拉丁文章，其用于代替英语去强调设计元素而不是内容。它也被称为占位符文（或填充文）。它是一个很便利的模板工具。它用于帮助编排文章或演示文稿的视觉元素，如排印，字体，或布局。Lorem
-            ipsum 大多是由古典作家和哲学家西塞罗创作的拉丁文的一部分。它的单词和字母由于添加或去移除而被改变了，所以故意使其内容荒谬；它不是真实的，正确的，再也不是可理解的拉丁语。虽然lorem
-            ipsum看起来仍像古典拉丁语，但实际上它没有任何意义。因为西塞罗的文本不包含K，W，Z 这几个有异于拉丁文的字母，所以这几个字母和其他一些字母常常被随机插入去模拟欧洲语言的排印样式，这些字在原文中其实并没有。
+            ipsum是指一篇用於網頁設計、排印、布局和印刷的偽拉丁文章，其用於代替英語去強調設計元素而不是內容。它也被稱為占位符文（或填充文）。它是一個很便利的模板工具。它用於幫助編排文章或演示文稿的視覺元素，如排印，字體，或布局。Lorem
+            ipsum 大多是由古典作家和哲學家西塞羅創作的拉丁文的一部分。它的單詞和字母由於添加或去移除而被改變了，所以故意使其內容荒謬；它不是真實的，正確的，再也不是可理解的拉丁語。雖然lorem
+            ipsum看起來仍像古典拉丁語，但實際上它沒有任何意義。因為西塞羅的文本不包含K，W，Z 這幾個有異於拉丁文的字母，所以這幾個字母和其他一些字母常常被隨機插入去模擬歐洲語言的排印樣式，這些字在原文中其實並沒有。
         </p>
+        <br>
         <div id="square1" class="square"></div>
-        <div id="square2" class="square"></div>
+        <div id="square2" class="square">
+            <p id="counting">0</p>
+        </div>
     </div>
 
 </body>

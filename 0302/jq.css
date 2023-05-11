@@ -1,84 +1,78 @@
-/* 
-button:not(:last-child) {
-    margin-right: 10px;
-} */
-
-#reset-button {
-    background-color: #111;
-}
-
-.red {
-    background-color: #e74c3c;
-}
-
-.blue {
-    background-color: #3498db;
-}
-
-.green {
-    background-color: #2ecc71;
-}
-
 body {
     font-family: "JetBrains Mono", monospace;
     display: flex;
     height: 100vh;
     margin: 0;
     background-color: whitesmoke;
-    background-size: auto 100%;
+    background-size: auto 60%;
     background-repeat: no-repeat;
     background-position: center center;
     justify-content: center;
     align-items: center;
 }
 
+p {
+    margin-bottom: 1.25vh;
+}
+
 button {
     font-family: "JetBrains Mono", monospace;
+    font-size: 0.75em;
     color: #fff;
     border: none;
-    padding: 0.5em 1em;
-    font-size: 1em;
-    cursor: pointer;
     border-radius: 5px;
+    padding: 0.5em 1em;
+    width: 12.5vh;
+    margin-bottom: 0.5vh;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    width: 25vw;
+    cursor: pointer;
 }
 
-.container {
-    /* display: grid; */
-    grid-gap: 10px;
+.red {
+    background-color: hsl(6, 78%, 57%);
 }
 
-.slider-container {
-    display: flex;
-    /* justify-content: center; */
+.blue {
+    background-color: hsl(204, 78%, 57%);
+}
+
+.green {
+    background-color: hsl(145, 63%, 49%);
+}
+
+#reset-button {
+    background-color: #111;
+    font-weight: bold;
 }
 
 #slider-text {
-    color: #333;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 60vw;
+    box-sizing: border-box;
+    width: 60vw;
 }
 
 .square {
-    width: 5vw;
-    height: 5vw;
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #square1 {
-    background-color: red;
+    background-color: hsl(204, 78%, 57%);
 }
-
 
 #square1:hover {
     transition: background 2s, width 2s, height 2s;
-    width: 10vw;
-    height: 10vw;
-    background: blueviolet;
+    width: 10vh;
+    height: 10vh;
+    background-color: darkblue;
     cursor: wait;
 }
 
@@ -87,32 +81,32 @@ button {
 }
 
 #square2 {
-    background-color: blueviolet;
+    background-color: hsl(145, 63%, 49%);
+    animation: myAnimation 2s ease-in-out 10 alternate;
 }
-
-#square2:hover {
-    animation: myAnimation 2s ease-in-out infinite alternate;
-}
-
 
 @keyframes myAnimation {
-    0% {
-        transform: translateX(0%) translateY(0%);
-        background-color: blueviolet;
-    }
-
     33% {
         transform: translateX(100%) translateY(0%);
-        background-color: red;
+        background-color: hsl(225, 75%, 50%);
+        width: 10vh;
     }
 
     66% {
         transform: translateX(200%) translateY(0%);
-        background-color: yellow;
+        background-color: hsl(270, 75%, 50%);
+        width: 15vh;
     }
 
     100% {
         transform: translateX(300%) translateY(0%);
-        background-color: violet;
+        background-color: hsl(350, 75%, 50%);
+        width: 20vh;
     }
+}
+
+#counting {
+    color: #fff;
+    text-align: center;
+    margin: 0;
 }
