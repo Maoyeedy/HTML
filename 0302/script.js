@@ -1,17 +1,17 @@
 $(document).ready(function () {
     $('#red-button').click(function () {
         $('body').css('background-image', 'url(1.png)');
-        $('#slider-text').css('color', 'red');
+        $('#slider-text').css('color', '#b41a2f');
     });
 
     $('#blue-button').click(function () {
         $('body').css('background-image', 'url(2.png)');
-        $('#slider-text').css('color', 'blue');
+        $('#slider-text').css('color', '#333080');
     });
 
     $('#green-button').click(function () {
         $('body').css('background-image', 'url(3.png)');
-        $('#slider-text').css('color', 'green');
+        $('#slider-text').css('color', '#85ab41');
     });
 
     $('#red-background').click(function () {
@@ -40,7 +40,17 @@ $(document).ready(function () {
     text.css('font-size', slider.val() + 'em');
 
     slider.on('input', function () {
-        // Change the font size of the text element
         text.css('font-size', slider.val() + 'em');
     });
+
+    function incrementNumber() {
+        var countingElement = document.getElementById("counting");
+        var number = parseInt(countingElement.innerText);
+        number++;
+        countingElement.innerText = number.toString();
+    }
+    var timerId = setInterval(incrementNumber, 4000);
+    setTimeout(function () { clearInterval(timerId); }, 24000);
 });
+
+
