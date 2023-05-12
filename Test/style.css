@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    width: 64vw;
+    margin: auto auto;
+}
+
+p {
+    font-family: sans-serif;
+    color: antiquewhite;
+    font-size: 8vw;
+    margin: 0em;
+    text-transform: uppercase;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
