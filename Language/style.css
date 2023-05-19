@@ -69,3 +69,11 @@ body {
     color: white;
     cursor: pointer;
 }
+
+
+.gradient-text {
+    background: linear-gradient(to right, purple, pink, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+}
