@@ -1,7 +1,20 @@
-/* 
-button:not(:last-child) {
-    margin-right: 10px;
-} */
+body {
+    font-family: "JetBrains Mono", monospace;
+    display: flex;
+    margin: 0;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    height: 80vh;
+
+    background-color: whitesmoke;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    justify-content: center;
+    /* align-items: center;
+    height: 100vh; */
+}
 
 #reset-button {
     background-color: #111;
@@ -19,18 +32,7 @@ button:not(:last-child) {
     background-color: #2ecc71;
 }
 
-body {
-    font-family: "JetBrains Mono", monospace;
-    display: flex;
-    height: 100vh;
-    margin: 0;
-    background-color: whitesmoke;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    justify-content: center;
-    align-items: center;
-}
+
 
 button {
     font-family: "JetBrains Mono", monospace;
@@ -42,16 +44,6 @@ button {
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     width: 25vw;
-}
-
-.container {
-    /* display: grid; */
-    grid-gap: 10px;
-}
-
-.slider-container {
-    display: flex;
-    /* justify-content: center; */
 }
 
 #slider-text {
@@ -73,12 +65,11 @@ button {
     background-color: red;
 }
 
-
 #square1:hover {
-    transition: background 2s, width 2s, height 2s;
+    transition: background-color 2s, width 2s, height 2s;
     width: 10vw;
     height: 10vw;
-    background: blueviolet;
+    background-color: blueviolet;
     cursor: wait;
 }
 
@@ -88,12 +79,8 @@ button {
 
 #square2 {
     background-color: blueviolet;
-}
-
-#square2:hover {
     animation: myAnimation 2s ease-in-out infinite alternate;
 }
-
 
 @keyframes myAnimation {
     0% {
@@ -101,12 +88,25 @@ button {
         background-color: blueviolet;
     }
 
-    33% {
-        transform: translateX(100%) translateY(0%);
+    50% {
+        transform: translateX(300%) translateY(0%);
         background-color: red;
     }
 
-    66% {
-        transform: translateX(200%) translateY(0%);
+    100% {
+        transform: translateX(600%) translateY(0%);
         background-color: yellow;
     }
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#counting {
+    color: white;
+}
