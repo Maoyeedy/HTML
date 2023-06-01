@@ -1,6 +1,0 @@
-    // add a hover event to the h1 element to change its font size
-    $('h1').hover(function () {
-        $(this).css('font-size', '3rem');
-    }, function () {
-        $(this).css('font-size', '2rem');
-    });
