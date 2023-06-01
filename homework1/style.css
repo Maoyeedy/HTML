@@ -5,15 +5,13 @@ body {
     padding-top: 10vh;
     padding-bottom: 10vh;
     height: 80vh;
+    justify-content: center;
+    align-items: center;
 
     background-color: whitesmoke;
     background-size: auto 90%;
     background-repeat: no-repeat;
     background-position: center center;
-
-    justify-content: center;
-    /* align-items: center;
-    height: 100vh; */
 }
 
 #reset-button {
@@ -31,8 +29,6 @@ body {
 .green {
     background-color: #2ecc71;
 }
-
-
 
 button {
     font-family: "JetBrains Mono", monospace;
