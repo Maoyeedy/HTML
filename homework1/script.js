@@ -1,4 +1,7 @@
 $(function () {
+    var slider = $('#font-slider');
+    var text = $('#slider-text');
+
     $('#red-button').on('click', function () {
         $('body').css('background-image', 'url(1.png)');
         $('#slider-text').css('color', '#b41a2f');
@@ -34,21 +37,18 @@ $(function () {
         text.css('font-size', slider.val() + 'em');
     });
 
-    var slider = $('#font-slider');
-    var text = $('#slider-text');
-
     text.css('font-size', slider.val() + 'em');
-
     slider.on('input', function () {
         text.css('font-size', slider.val() + 'em');
     });
 
+    let count = 0;
     function incrementNumber() {
-        var countingElement = document.getElementById("counting");
-        var number = parseInt(countingElement.innerText);
-        number++;
-        countingElement.innerText = number.toString();
+        count++;
+        $('#counting').text(count);
+        if (count < 5) {
+            setTimeout(incrementNumber, 4000);
+        }
     }
-    var timerId = setInterval(incrementNumber, 4000);
-    setTimeout(function () { clearInterval(timerId); }, 24000);
+    incrementNumber();
 });
