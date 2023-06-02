@@ -1,0 +1,96 @@
+.column {
+  padding: 2vh;
+  /* background-color: red;
+  color: white; */
+}
+
+.column > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.column > .avatar {
+  width: 8vw;
+  height: 8vw;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-bottom: 0.75rem;
+}
+
+.column > .button {
+  display: inline-block;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+}
+
+.column > .button:last-child {
+  margin: 0;
+}
+
+.column > .button:hover,
+.column > .button:focus {
+  filter: brightness(90%);
+}
+
+.column .icon {
+  padding: 0px 6px 3px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (orientation: portrait) {
+  .column > .button {
+    font-size: 0;
+    border-radius: 4rem;
+  }
+
+  .column .icon {
+    padding: 0;
+  }
+}
+
+/* Brand Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button.button-game {
+  background-color: #6637e8;
+}
+
+.button.button-blog {
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
+}
+
+.button.button-instagram {
+  background-image: linear-gradient(-135deg, #f58529, #dd2a7b, #515bd4);
+}
+
+.button.button-github {
+  background-color: #171515;
+}
+
+.button.button-pinterest {
+  color: #000000;
+  background-color: #ffebed;
+}
+
+.button.button-behance {
+  background-color: #1769ff;
+}
+
+.button.button-line {
+  background-color: #06c755;
+}
+
+.button.button-mail {
+  background-color: #1e2329;
+  background-color: #e53626;
+}
