@@ -8,18 +8,14 @@ body {
 
 #container {
     height: 90vh;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    gap: 0;
-    transition: gap ease 0.5s;
+    overflow: scroll;
 }
 
 #main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     gap: 2vh;
 }
 
@@ -31,7 +27,7 @@ body {
 }
 
 #main > a.hovered {
-    width: 150%;
+    /* width: 150%; */
 }
 
 #main > a > img {
