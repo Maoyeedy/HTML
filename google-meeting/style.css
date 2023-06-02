@@ -1,0 +1,112 @@
+body {
+    height: 98vh;
+    margin: 2vh;
+    margin-bottom: 0;
+    background-color: #202124;
+    font-family: 'Barlow', sans-serif;
+}
+
+#container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5vh;
+
+    transition: width 0.45s ease;
+    width: 100%;
+}
+
+.panel {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1.5vh;
+    transition: width 0.4s ease, margin 0.4s ease;
+}
+
+#right {
+    margin-left: 0vh;
+}
+
+#left {
+    margin-right: 0vh;
+}
+
+.show-right-panel #right {
+    width: 25%;
+    margin-left: 1.5vh;
+}
+
+.show-left-panel #left {
+    width: 25%;
+    margin-right: 1.5vh;
+}
+
+.block {
+    background-color: #3C4043;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5vh;
+}
+
+.block img {
+    width: 8vw;
+    height: 8vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    width: 100%;
+}
+
+#name {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#name:hover {
+    color: red;
+}
+
+#button {
+    width: 4vh;
+    height: 4vh;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: aliceblue;
+}
+
+#circle-group {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    gap: 1.5vh;
+}
+
+#footer .circle {
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    background-color: white;
+}
