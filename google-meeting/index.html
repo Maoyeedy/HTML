@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <div id="left" class="panel"></div>
+        <div id="main">
+            <div class="block">
+                <img src="1.avif" />
+            </div>
+            <div class="block">
+                <img src="2.avif" />
+            </div>
+            <div class="block">
+                <img src="3.avif" />
+            </div>
+            <div class="block">
+                <img src="4.avif" />
+            </div>
+            <div class="block">
+                <img src="5.avif" />
+            </div>
+            <div class="block">
+                <img src="6.avif" />
+            </div>
+            <div class="block">
+                <img src="7.avif" />
+            </div>
+            <div class="block">
+                <img src="8.avif" />
+            </div>
+            <div class="block">
+                <img src="9.avif" />
+            </div>
+        </div>
+        <div id="right" class="panel"> </div>
+    </div>
+
+    <div id="footer">
+        <a href="https://maoyeedy.cyou/" id="name">Maoyeedy</a>
+        <div id="circle-group">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div id="button"></div>
+    </div>
+
+</body>
+<script>
+    const button = document.getElementById('button');
+    const name = document.getElementById('name');
+    const container = document.getElementById('container');
+
+    button.addEventListener('mouseover', toggleRightPanel);
+    button.addEventListener('mouseout', toggleRightPanel);
+    // button.addEventListener('click', toggleRightPanel);
+
+    name.addEventListener('mouseover', toggleLeftPanel);
+    name.addEventListener('mouseout', toggleLeftPanel);
+
+    function toggleRightPanel() {
+        container.classList.toggle('show-right-panel');
+    }
+
+    function toggleLeftPanel() {
+        container.classList.toggle('show-left-panel');
+    }
+</script>
+
+</html>

@@ -48,16 +48,10 @@ pre {
     margin: 0;
 }
 
-.plain {
-    font-family: 'JetBrains Mono', monospace;
-    overflow: auto;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    background-color: white;
-    color: red;
-    font-size: 0.8rem;
-}
-
-.highlight {
+pre code.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
 }

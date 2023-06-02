@@ -1,0 +1,47 @@
+.hljs {
+    background: #ffffff;
+    color: black;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-strong,
+.hljs-title {
+    font-weight: 700;
+    color: hsl(0, 100%, 40%);
+}
+
+.hljs-comment {
+    color: hsl(0, 12%, 50%)
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-literal,
+.hljs-name,
+.hljs-quote,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-tag,
+.hljs-title,
+.hljs-type {
+    color: hsl(0, 100%, 40%);
+}
+
+.hljs-attribute,
+.hljs-bullet,
+.hljs-deletion,
+.hljs-link,
+.hljs-meta,
+.hljs-regexp,
+.hljs-subst,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+    color: hsl(0, 100%, 40%);
+}
