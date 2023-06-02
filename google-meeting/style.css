@@ -26,9 +26,6 @@ body {
     transition: ease 0.25s;
 }
 
-#main > a.hovered {
-    /* width: 150%; */
-}
 
 #main > a > img {
     width: 100%;
@@ -37,6 +34,10 @@ body {
     z-index: 99;
     transition: scale ease 0.5s;
     scale: 1;
+}
+
+#main > a.hovered {
+    /* width: 150%; */
 }
 
 #main > a.hovered > img {

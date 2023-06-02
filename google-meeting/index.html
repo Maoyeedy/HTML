@@ -112,24 +112,22 @@
     const left = document.getElementById('left');
     const right = document.getElementById('right');
 
-    button.addEventListener('mouseover', toggleRightPanel);
-    button.addEventListener('mouseout', toggleRightPanel);
     name.addEventListener('mouseover', toggleLeftPanel);
     name.addEventListener('mouseout', toggleLeftPanel);
+    button.addEventListener('mouseover', toggleRightPanel);
+    button.addEventListener('mouseout', toggleRightPanel);
     left.addEventListener('mouseover', toggleLeftPanel);
     left.addEventListener('mouseout', toggleLeftPanel);
     right.addEventListener('mouseover', toggleRightPanel);
     right.addEventListener('mouseout', toggleRightPanel);
-
     // button.addEventListener('click', toggleRightPanel)
     // name.addEventListener('click', toggleLeftPanel)
 
-    function toggleRightPanel() {
-        container.classList.toggle('show-right-panel');
-    }
-
     function toggleLeftPanel() {
         container.classList.toggle('show-left-panel');
+    }
+    function toggleRightPanel() {
+        container.classList.toggle('show-right-panel');
     }
 
     const links = document.querySelectorAll('#main a');
