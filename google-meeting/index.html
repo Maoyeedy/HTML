@@ -13,41 +13,85 @@
 
 <body>
     <div id="container">
-        <div id="left" class="panel"></div>
-        <div id="main">
-            <div class="block">
-                <img src="1.avif" />
-            </div>
-            <div class="block">
-                <img src="2.avif" />
-            </div>
-            <div class="block">
-                <img src="3.avif" />
-            </div>
-            <div class="block">
-                <img src="4.avif" />
-            </div>
-            <div class="block">
-                <img src="5.avif" />
-            </div>
-            <div class="block">
-                <img src="6.avif" />
-            </div>
-            <div class="block">
-                <img src="7.avif" />
-            </div>
-            <div class="block">
-                <img src="8.avif" />
-            </div>
-            <div class="block">
-                <img src="9.avif" />
-            </div>
+        <div id="left" class="panel">
+            <div class="fill"></div>
+            <div class="placeholder"></div>
         </div>
-        <div id="right" class="panel"> </div>
+
+        <div id="main">
+            <a href="1.html">
+                <div class="text-layer">
+                    <h1>Project 1</h1>
+                </div>
+                <div class="layer">
+                </div><img src="1.avif" />
+            </a>
+
+            <a href="2.html">
+                <div class="text-layer">
+                    <h1>Project 2</h1>
+                </div>
+                <div class="layer"></div><img src="2.avif" />
+            </a>
+
+            <a href="3.html">
+                <div class="text-layer">
+                    <h1>Project 3</h1>
+                </div>
+                <div class="layer"></div><img src="3.avif" />
+            </a>
+
+            <a href="4.html">
+                <div class="text-layer">
+                    <h1>Project 4</h1>
+                </div>
+                <div class="layer"></div><img src="4.avif" />
+            </a>
+
+            <a href="5.html">
+                <div class="text-layer">
+                    <h1>Project 5</h1>
+                </div>
+                <div class="layer"></div><img src="5.avif" />
+            </a>
+
+            <a href="6.html">
+                <div class="text-layer">
+                    <h1>Project 6</h1>
+                </div>
+                <div class="layer"></div><img src="6.avif" />
+            </a>
+
+            <a href="7.html">
+                <div class="text-layer">
+                    <h1>Project 7</h1>
+                </div>
+                <div class="layer"></div><img src="7.avif" />
+            </a>
+
+            <a href="8.html">
+                <div class="text-layer">
+                    <h1>Project 8</h1>
+                </div>
+                <div class="layer"></div><img src="8.avif" />
+            </a>
+
+            <a href="9.html">
+                <div class="text-layer">
+                    <h1>Project 9</h1>
+                </div>
+                <div class="layer"></div><img src="9.avif" />
+            </a>
+        </div>
+
+        <div id="right" class="panel">
+            <div class="placeholder"></div>
+            <div class="fill"></div>
+        </div>
     </div>
 
     <div id="footer">
-        <a href="https://maoyeedy.cyou/" id="name">Maoyeedy</a>
+        <div id="name">Maoyeedy</div>
         <div id="circle-group">
             <div class="circle"></div>
             <div class="circle"></div>
@@ -64,13 +108,20 @@
     const button = document.getElementById('button');
     const name = document.getElementById('name');
     const container = document.getElementById('container');
+    const left = document.getElementById('left');
+    const right = document.getElementById('right');
 
     button.addEventListener('mouseover', toggleRightPanel);
     button.addEventListener('mouseout', toggleRightPanel);
-    // button.addEventListener('click', toggleRightPanel);
-
     name.addEventListener('mouseover', toggleLeftPanel);
     name.addEventListener('mouseout', toggleLeftPanel);
+    left.addEventListener('mouseover', toggleLeftPanel);
+    left.addEventListener('mouseout', toggleLeftPanel);
+    right.addEventListener('mouseover', toggleRightPanel);
+    right.addEventListener('mouseout', toggleRightPanel);
+
+    // button.addEventListener('click', toggleRightPanel)
+    // name.addEventListener('click', toggleLeftPanel)
 
     function toggleRightPanel() {
         container.classList.toggle('show-right-panel');
@@ -79,6 +130,21 @@
     function toggleLeftPanel() {
         container.classList.toggle('show-left-panel');
     }
+
+    const links = document.querySelectorAll('#main a');
+
+    links.forEach(link => {
+        const layer = link.querySelector('.text-layer');
+
+        layer.addEventListener('mouseover', () => {
+            link.classList.add('hovered');
+        });
+
+        layer.addEventListener('mouseout', () => {
+            link.classList.remove('hovered');
+        });
+    });
+
 </script>
 
 </html>

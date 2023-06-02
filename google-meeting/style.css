@@ -11,58 +11,95 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 0;
+    transition: gap ease 0.5s;
 }
 
 #main {
-    height: 100%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1.5vh;
+    gap: 2vh;
+}
 
-    transition: width 0.45s ease;
+#main > a {
+    position: relative;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    transition: ease 0.25s;
+}
+
+#main > a.hovered {
+    width: 150%;
+}
+
+#main > a > img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99;
+    transition: scale ease 0.5s;
+    scale: 1;
+}
+
+#main > a.hovered > img {
+    scale: 1.05;
+}
+
+#main > a > .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 100;
+    transition: opacity ease 0.75s;
+    opacity: 0%;
+}
+
+#main > a.hovered > .layer {
+    opacity: 40%;
+}
+
+#main > a > .text-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    color: white;
+    transition: opacity ease 0.75s;
+    opacity: 0%;
+}
+
+#main > a.hovered > .text-layer {
+    opacity: 100%;
 }
 
 .panel {
     width: 0%;
-    height: 100%;
+    transition: width 0.4s ease;
+    display: flex;
+}
+
+.fill {
+    width: 100%;
     background-color: white;
     border-radius: 1.5vh;
-    transition: width 0.4s ease, margin 0.4s ease;
 }
 
-#right {
-    margin-left: 0vh;
-}
-
-#left {
-    margin-right: 0vh;
+.placeholder {
+    width: 2vh;
 }
 
 .show-right-panel #right {
     width: 25%;
-    margin-left: 1.5vh;
 }
 
 .show-left-panel #left {
     width: 25%;
-    margin-right: 1.5vh;
-}
-
-.block {
-    background-color: #3C4043;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1.5vh;
-}
-
-.block img {
-    width: 8vw;
-    height: 8vw;
-    object-fit: cover;
-    border-radius: 50%;
 }
 
 #footer {
@@ -75,9 +112,11 @@ body {
 
 #name {
     color: white;
+    color: hsl(225, 6%, 60%);
     font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #name:hover {
