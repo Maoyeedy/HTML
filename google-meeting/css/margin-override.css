@@ -1,12 +1,33 @@
-body {
-    margin: 4vh;
-    height: 96vh;
+:root {
+    --footer-height: 10vh;
+    --body-margin: 5vh;
+    --main-gap: 2.5vh;
 }
 
-.line > a {
-    height: 43vh;
+body {
+    margin: var(--body-margin);
+    margin-bottom: 0;
+    height: calc(100vh - var(--body-margin));
 }
 
 #container {
-    height: 88vh;
+    height: calc(100vh - var(--body-margin) - var(--footer-height));
+    overflow-y: scroll;
+}
+
+#main {
+    gap: var(--main-gap);
+}
+
+.line {
+    height: calc((100vh - var(--body-margin) - var(--footer-height) - var(--main-gap)) / 2);
+    gap: var(--main-gap);
+}
+
+#footer {
+    height: var(--footer-height)
+}
+
+.placeholder {
+    width: var(--main-gap);
 }

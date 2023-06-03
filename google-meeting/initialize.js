@@ -9,7 +9,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
         anchor.target = '_blank';
         anchor.rel = 'noopener';
     });
-
-    const body = document.querySelector('body');
-    body.style.textRendering = 'optimizeLegibility';
 });
