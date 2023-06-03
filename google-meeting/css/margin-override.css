@@ -1,0 +1,12 @@
+body {
+    margin: 4vh;
+    height: 96vh;
+}
+
+.line > a {
+    height: 43vh;
+}
+
+#container {
+    height: 88vh;
+}

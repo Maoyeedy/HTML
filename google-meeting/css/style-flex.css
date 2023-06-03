@@ -1,13 +1,14 @@
+* {
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
 body {
-    /* height: 92vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 8vh;
-    margin-bottom: 0; */
     height: 98vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 2vh;
+    margin: 2vh;
     margin-bottom: 0;
 
     background-color: #202124;
@@ -25,6 +26,7 @@ body {
     display: grid;
     gap: 2vh;
     overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .line {
@@ -36,7 +38,6 @@ body {
 
 .line > a {
     width: 100%;
-    /* height: 41vh; */
     height: 44vh;
     position: relative;
     border-radius: 1.5vh;
@@ -53,7 +54,7 @@ body {
 }
 
 #line3 > a:hover {
-    width: 90%;
+    width: 100%;
 }
 
 .line > a > img {

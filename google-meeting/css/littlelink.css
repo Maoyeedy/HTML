@@ -1,7 +1,11 @@
 .littlelink {
   padding: 2vh;
-  /* background-color: red;
-  color: white; */
+  /* transition: opacity ease 0.4s;
+  opacity: 0.25; */
+}
+
+.show-left-panel .littlelink {
+  opacity: 1;
 }
 
 .littlelink > h3 {
