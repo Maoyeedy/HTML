@@ -1,16 +1,17 @@
-.column {
+.littlelink {
   padding: 2vh;
   /* background-color: red;
   color: white; */
 }
 
-.column > h3 {
+.littlelink > h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
+  white-space: nowrap;
 }
 
-.column > .avatar {
+.littlelink > .avatar {
   width: 8vw;
   height: 8vw;
   object-fit: cover;
@@ -19,7 +20,7 @@
   margin-bottom: 0.75rem;
 }
 
-.column > .button {
+.littlelink > .button {
   display: inline-block;
   height: 3rem;
   line-height: 3rem;
@@ -30,18 +31,19 @@
   text-decoration: none;
   text-align: center;
   color: #ffffff;
+  white-space: nowrap;
 }
 
-.column > .button:last-child {
+.littlelink > .button:last-child {
   margin: 0;
 }
 
-.column > .button:hover,
-.column > .button:focus {
+.littlelink > .button:hover,
+.littlelink > .button:focus {
   filter: brightness(90%);
 }
 
-.column .icon {
+.littlelink .icon {
   padding: 0px 6px 3px 0px;
   vertical-align: middle;
   width: 20px;
@@ -49,12 +51,12 @@
 }
 
 @media only screen and (orientation: portrait) {
-  .column > .button {
+  .littlelink > .button {
     font-size: 0;
     border-radius: 4rem;
   }
 
-  .column .icon {
+  .littlelink .icon {
     padding: 0;
   }
 }

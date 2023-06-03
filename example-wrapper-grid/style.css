@@ -1,0 +1,35 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.wrapper > div {
+    flex: 1 1 150px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.wrapper {
+    width: 50vw;
+    height: 25vh;
+    gap: 1rem;
+    margin: auto;
+}
+
+.wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}

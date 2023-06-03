@@ -44,10 +44,16 @@ body {
     transition: width ease 0.4s;
 }
 
+#line1 > a:hover {
+    width: 175%;
+}
 
-.line > a:not(.hovered) {
-    width: 92%;
-    /* width: 105%; */
+#line2 > a:hover {
+    width: 125%;
+}
+
+#line3 > a:hover {
+    width: 90%;
 }
 
 .line > a > img {
@@ -56,10 +62,10 @@ body {
     object-fit: cover;
     z-index: 99;
     transition: scale ease 0.4s;
-    scale: 1.12;
+    scale: 1.1;
 }
 
-.line > a.hovered > img {
+.line > a:hover > img {
     scale: 1;
 }
 
@@ -73,7 +79,7 @@ body {
     opacity: 0%;
 }
 
-.line > a.hovered > .layer {
+.line > a:hover > .layer {
     opacity: 40%;
 }
 
@@ -90,7 +96,7 @@ body {
     opacity: 0%;
 }
 
-.line > a.hovered > .text-layer {
+.line > a:hover > .text-layer {
     opacity: 100%;
 }
 

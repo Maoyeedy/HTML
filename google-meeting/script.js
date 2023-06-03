@@ -27,21 +27,6 @@ right.addEventListener('mouseout', toggleRightPanel);
 // toggleLeftPanel();
 
 // Function 2
-const links = document.querySelectorAll('#main a');
-
-links.forEach(link => {
-    const layer = link.querySelector('.text-layer');
-
-    layer.addEventListener('mouseover', () => {
-        link.classList.add('hovered');
-    });
-
-    layer.addEventListener('mouseout', () => {
-        link.classList.remove('hovered');
-    });
-});
-
-// Function 3
 let scrollStrength = 0.46; // Customize the scroll strength as desired
 
 document.getElementById('main').addEventListener('wheel', function (event) {
