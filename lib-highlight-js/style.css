@@ -12,15 +12,16 @@ body {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 2em;
-    height: 20rem;
-    width: 80vw;
+    height: 22rem;
+    width: 75vw;
     background-color: red;
     padding: 2rem;
     border-radius: 2rem;
+    box-sizing: border-box;
 }
 
 .img-code > img {
-    max-height: 20rem;
+    height: 18rem;
     border-radius: 1rem;
 }
 
@@ -39,18 +40,17 @@ body {
     margin: 0;
     margin-bottom: 1rem;
     line-height: 150%;
-    word-wrap: break-word;
 }
 
 pre {
+    margin: 0;
     overflow: auto;
     border-radius: 1rem;
-    margin: 0;
 }
 
 pre code.hljs {
     display: block;
-    overflow-x: auto;
+    overflow: auto;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;

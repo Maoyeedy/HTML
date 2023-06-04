@@ -1,20 +1,15 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
 }
 
 .container {
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-}
-
-.placeholder {
-    /* height: 20vh; */
-    width: 100%;
-    padding-bottom: 20%;
-    background-color: gainsboro;
 }

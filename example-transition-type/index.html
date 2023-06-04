@@ -2,44 +2,8 @@
 <html>
 
 <head>
-    <style>
-        body {
-            height: 100vh;
-            width: 100vw;
-            margin: 0;
-        }
-
-        .circle {
-            width: 10vw;
-            height: 10vw;
-            border-radius: 50%;
-            position: absolute;
-            left: 10vw;
-            transition: all 500ms;
-        }
-
-        .blue {
-            background-color: blue;
-            bottom: 10vw;
-            transition-timing-function: ease;
-        }
-
-
-        .red {
-            background-color: red;
-            top: 10vw;
-            transition-timing-function: ease-in-out;
-        }
-
-        .circle span {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            color: white;
-        }
-    </style>
+    <title>Press Spacebar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -47,32 +11,7 @@
         <div id="circle2" class="circle blue"><span>ease</span></div>
         <div id="circle1" class="circle red"><span>in-out</span></div>
     </div>
-
-    <script>
-        let canMoveCircles = true;
-        document.addEventListener("keydown", function (event) {
-            if (event.code === "Space" && canMoveCircles) {
-                moveCircles();
-                canMoveCircles = false;
-                setTimeout(function () {
-                    canMoveCircles = true;
-                }, 500);
-            }
-        });
-
-        function moveCircles() {
-            var circle1 = document.getElementById("circle1");
-            var circle2 = document.getElementById("circle2");
-
-            if (circle1.style.left === "80vw") {
-                circle1.style.left = "10vw";
-                circle2.style.left = "10vw";
-            } else {
-                circle1.style.left = "80vw";
-                circle2.style.left = "80vw";
-            }
-        }
-    </script>
+    <script async src="script.js"></script>
 </body>
 
 </html>

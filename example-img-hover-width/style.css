@@ -7,18 +7,17 @@ body {
     height: 100vh;
 }
 
-.image {
+.container img {
     width: 33.33%;
     height: 100vh;
     object-fit: cover;
-    /* Crop the image to fit the container */
     transition: width 0.3s ease;
 }
 
-.image:hover {
+.container img:hover {
     width: 50%;
 }
 
-.image:not(:hover) {
+.container img:not(:hover) {
     width: 25%;
 }
