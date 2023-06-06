@@ -6,14 +6,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="style.css">
 
-  <script async src="https://cdn.jsdelivr.net/npm/es-module-shims/dist/es-module-shims.min.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1.7.1/dist/es-module-shims.min.js"></script>
 
   <script type="importmap">
       {
         "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.min.js"
+          "three": "https://cdn.jsdelivr.net/npm/three@0.152.1/build/three.module.min.js"
         }
       }
     </script>
@@ -21,32 +21,87 @@
   <script type="module" src="model-viewer-module.min.js"></script>
   <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script> -->
   <!-- <script type="module" src="model-viewer-effects.min.js"></script> -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects@1.0.0/dist/model-viewer-effects.min.js"></script>
 
 <body>
-  <div id="card">
-    <model-viewer src="Nerdo.glb" ios-src="Nerdo.usdz" shadow-intensity="0" camera-controls camera-orbit="90deg 90deg 50m" auto-rotate ar alt="A 3D model of an Nerdo">
+  <div class="card card1">
+    <model-viewer src="Nerdo.glb" shadow-intensity="0" camera-controls camera-orbit="90deg 90deg 50m" auto-rotate>
       <effect-composer>
-        <pixelate-effect blend-mode="DEFAULT" opacity="1" granularity="12"></pixelate-effect>
+        <pixelate-effect opacity="1" granularity="12"></pixelate-effect>
+        <color-grade-effect opacity="1" brightness="0" contrast="0.1" saturation="0" hue="0"></color-grade-effect>
+        <!-- <outline-effect color="black" opacity="1" strength="10" smoothing="1"></outline-effect> -->
+        <!-- <bloom-effect opacity="1" strength="0.6" threshold="0.85" radius="0.6" smoothing="0.025"></bloom-effect> -->
+        <!-- <ssao-effect opacity="1" strength="2"></ssao-effect> -->
       </effect-composer>
     </model-viewer>
-
     <section class="attribution">
       <span>
         <h1>Nerdo</h1>
         <span>By Maoyeedy</span>
       </span>
-      <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
-        <img src="cc.svg">
-        <img src="by.svg">
-      </a>
     </section>
   </div>
 
+  <div class="card">
+    <model-viewer id="orbit2" interpolation-decay="200" src="Marble.glb"> </model-viewer>
+    <script>
+      (() => {
+        const modelViewer = document.getElementById('orbit2');
+        const orbitCycle = [
+          '45deg 55deg 4m',
+          '-60deg 110deg 2m',
+          modelViewer.cameraOrbit
+        ];
+
+        setInterval(() => {
+          const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+          modelViewer.cameraOrbit =
+            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+        }, 3000);
+      })();
+    </script>
+  </div>
+
+  <div class="card">
+    <model-viewer src="Mana_Fantasy_Teamed_Portal.glb" shadow-intensity="0" camera-controls camera-orbit="45deg 95deg 80%" auto-rotate>
+      <effect-composer>
+        <color-grade-effect opacity="1" brightness="0.1" contrast="0.1" saturation="0.3" hue="0"></color-grade-effect>
+        <bloom-effect opacity="1" strength="0.9" threshold="0.6" radius="0.3" smoothing="0.025"></bloom-effect>
+      </effect-composer>
+    </model-viewer>
+  </div>
+
+  <div class="card">
+    <model-viewer src="ChainsawMan.glb" shadow-intensity="0" camera-controls camera-orbit="270deg 60deg 65%"> </model-viewer>
+  </div>
+
+  <div class="card card2">
+    <model-viewer src="my_pretty.glb" shadow-intensity="0" camera-controls camera-orbit="0deg 95deg 40%">
+      <effect-composer>
+        <bloom-effect opacity="1" strength="0.3" threshold="0.6" radius="0.3" smoothing="0.02"></bloom-effect>
+      </effect-composer>
+    </model-viewer>
+  </div>
+
+  <div class="card card3">
+    <model-viewer src="Easter_Island_dude.glb" shadow-intensity="0.2" disable-zoom camera-controls camera-orbit="0deg 100deg 120%">
+      <effect-composer>
+        <color-grade-effect opacity="1" brightness="0" contrast="0.2" saturation="0" hue="0"></color-grade-effect>
+        <outline-effect color="black" opacity="1" strength="10" smoothing="1"></outline-effect>
+      </effect-composer>
+    </model-viewer>
+  </div>
+
+
   <footer>
-    <span>This page is a basic demo of the <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
+    <span>Made possible <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
     <span>It makes displaying 3D and AR content on the web easy ✌️</span>
   </footer>
+
+  <script>
+    self.ModelViewerElement = self.ModelViewerElement || {};
+    self.ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.19.0/meshopt_decoder.min.js';
+  </script>
 </body>
 
 </html>
