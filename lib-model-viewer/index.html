@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>&lt;model-viewer&gt; example</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.min.css">
+
+  <script async src="https://cdn.jsdelivr.net/npm/es-module-shims/dist/es-module-shims.min.js"></script>
+
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.min.js"
+        }
+      }
+    </script>
+
+  <script type="module" src="model-viewer-module.min.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+  <!-- <script type="module" src="model-viewer-effects.min.js"></script> -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
+
+<body>
+  <div id="card">
+    <model-viewer src="Nerdo.glb" ios-src="Nerdo.usdz" shadow-intensity="0" camera-controls camera-orbit="90deg 90deg 50m" auto-rotate ar alt="A 3D model of an Nerdo">
+      <effect-composer>
+        <pixelate-effect blend-mode="DEFAULT" opacity="1" granularity="12"></pixelate-effect>
+      </effect-composer>
+    </model-viewer>
+
+    <section class="attribution">
+      <span>
+        <h1>Nerdo</h1>
+        <span>By Maoyeedy</span>
+      </span>
+      <a class="cc" href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
+        <img src="cc.svg">
+        <img src="by.svg">
+      </a>
+    </section>
+  </div>
+
+  <footer>
+    <span>This page is a basic demo of the <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
+    <span>It makes displaying 3D and AR content on the web easy ✌️</span>
+  </footer>
+</body>
+
+</html>

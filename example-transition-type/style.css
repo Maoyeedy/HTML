@@ -16,7 +16,6 @@ body {
 .blue {
     background-color: blue;
     bottom: 10vw;
-    transition-timing-function: ease;
 }
 
 
