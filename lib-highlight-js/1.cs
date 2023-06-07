@@ -1,18 +1,24 @@
 using System;
+using System.IO;
+using UnityEngine;
 
-class Program
+public class ScreenshotScript : MonoBehaviour
 {
-    static void Main()
+    public string folderPath = Path.Combine(Application.dataPath, "..", "SampleRecordings");
+    public KeyCode captureKey = KeyCode.Tab;
+
+    private void Start()
     {
-        float number1 = 3.14f;
-        float number2 = 2.718f;
+        Directory.CreateDirectory(folderPath);
+    }
 
-        float sum = number1 + number2;
-        float product = number1 * number2;
+    private void Update()
+    {
+        if (!Input.GetKeyDown(captureKey)) return;
+        string filename = DateTime.Now.ToString("yyyy.MM.dd-HH.mm.ss") + ".png";
+        string filePath = Path.Combine(folderPath, filename);
 
-        Console.WriteLine("Number 1: " + number1);
-        Console.WriteLine("Number 2: " + number2);
-        Console.WriteLine("Sum: " + sum);
-        Console.WriteLine("Product: " + product);
+        ScreenCapture.CaptureScreenshot(filePath);
+        print("Screenshot saved: " + filePath);
     }
 }

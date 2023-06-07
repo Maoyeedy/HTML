@@ -1,3 +1,17 @@
+pre {
+    margin: 0;
+    overflow: auto;
+    border-radius: 1rem;
+}
+
+pre code.hljs {
+    display: block;
+    overflow: auto;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+}
+
 body {
     margin: 2em;
     gap: 2em;
@@ -14,13 +28,14 @@ body {
     gap: 2em;
     height: 22rem;
     width: 75vw;
-    background-color: red;
+    background-color: black;
     padding: 2rem;
     border-radius: 2rem;
     box-sizing: border-box;
 }
 
-.img-code > img {
+.img-code > img,
+.img-code > iframe {
     height: 18rem;
     border-radius: 1rem;
 }
@@ -42,16 +57,7 @@ body {
     line-height: 150%;
 }
 
-pre {
-    margin: 0;
-    overflow: auto;
-    border-radius: 1rem;
-}
-
-pre code.hljs {
-    display: block;
-    overflow: auto;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.8rem;
+.text-container a {
+    color: white;
+    font-weight: bold;
 }

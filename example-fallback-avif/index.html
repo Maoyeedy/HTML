@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest</title>
-    <link rel="icon" href="pinterest.svg">
+    <title>AVIF Fallback to WebP Example</title>
     <style>
         body {
             margin: 2rem;
@@ -14,41 +13,48 @@
             place-items: center;
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            width: 80vw;
-            padding: 2rem;
-            gap: 2rem;
-            background-color: antiquewhite;
+        picture {
+            width: 400px;
+            height: 400px;
         }
 
-        .container img {
+        img {
             width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        h2 {
+            color: red;
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <picture>
-            <source srcset="1.avif" type="image/avif">
-            <source srcset="1.webp" type="image/webp">
-            <img src="1.webp" alt="Image 1">
-        </picture>
+    <h1>AVIF Fallback to WebP Example</h1>
+    <picture>
+        <source srcset="/img/placeholder/1.avif" type="image/avif">
+        <source srcset="/img/placeholder/1.webp" type="image/webp">
+        <img src="/img/placeholder/1.avif">
+    </picture>
+    <h2 id="result1">Currently showing Webp</h2>
+    <h2 id="result2">Currently showing AVIF</h2>
 
-        <picture>
-            <source srcset="2.avif" type="image/avif">
-            <source srcset="2.webp" type="image/webp">
-            <img src="2.webp" alt="Image 2">
-        </picture>
+    <script>
+        let img = document.querySelector('img');
+        let result1 = document.getElementById('result1');
+        let result2 = document.getElementById('result2');
 
-        <picture>
-            <source srcset="3.avif" type="image/avif">
-            <source srcset="3.webp" type="image/webp">
-            <img src="3.webp" alt="Image 3">
-        </picture>
-    </div>
+        img.addEventListener('load', function () {
+            if (img.currentSrc.endsWith('.webp')) {
+                result1.style.display = 'block';
+            } else {
+                result2.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 
 </html>

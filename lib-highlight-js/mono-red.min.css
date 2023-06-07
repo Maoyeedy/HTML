@@ -1,3 +1,7 @@
+.img-code {
+    background-color: hsl(0, 100%, 60%);
+}
+
 .hljs {
     background: #ffffff;
     color: black;
