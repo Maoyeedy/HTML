@@ -23,17 +23,17 @@ greenBackground.addEventListener("click", function () {
 });
 
 redButton.addEventListener("click", function () {
-    body.style.backgroundImage = "url(1.png)";
+    body.style.backgroundImage = "url(1.avif)";
     text.style.color = "hsl(348, 80%, 40%)";
 });
 
 blueButton.addEventListener("click", function () {
-    body.style.backgroundImage = "url(2.png)";
+    body.style.backgroundImage = "url(2.avif)";
     text.style.color = "hsl(240, 100%, 32%)";
 });
 
 greenButton.addEventListener("click", function () {
-    body.style.backgroundImage = "url(3.png)";
+    body.style.backgroundImage = "url(3.avif)";
     text.style.color = "hsl(100, 50%, 45%)";
 });
 

@@ -2,17 +2,17 @@ var slider = $('#font-slider');
 var text = $('#slider-text');
 
 $('#red-button').on('click', function () {
-    $('body').css('background-image', 'url(1.png)');
+    $('body').css('background-image', 'url(1.avif)');
     $('#slider-text').css('color', '#b41a2f');
 });
 
 $('#blue-button').on('click', function () {
-    $('body').css('background-image', 'url(2.png)');
+    $('body').css('background-image', 'url(2.avif)');
     $('#slider-text').css('color', '#333080');
 });
 
 $('#green-button').on('click', function () {
-    $('body').css('background-image', 'url(3.png)');
+    $('body').css('background-image', 'url(3.avif)');
     $('#slider-text').css('color', '#85ab41');
 });
 
