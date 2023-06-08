@@ -28,7 +28,7 @@ h1 {
     gap: 2em;
     display: grid;
     margin: auto;
-    max-width: 1000px;
+    max-width: 950px;
 }
 
 .comparison img {
