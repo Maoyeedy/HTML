@@ -41,26 +41,6 @@
   </div>
 
   <div class="card">
-    <model-viewer id="orbit2" interpolation-decay="200" src="Marble.glb"> </model-viewer>
-    <script>
-      (() => {
-        const modelViewer = document.getElementById('orbit2');
-        const orbitCycle = [
-          '45deg 55deg 4m',
-          '-60deg 110deg 2m',
-          modelViewer.cameraOrbit
-        ];
-
-        setInterval(() => {
-          const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
-          modelViewer.cameraOrbit =
-            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
-        }, 3000);
-      })();
-    </script>
-  </div>
-
-  <div class="card">
     <model-viewer src="Mana_Fantasy_Teamed_Portal.glb" shadow-intensity="0" camera-controls camera-orbit="45deg 95deg 80%" auto-rotate>
       <effect-composer>
         <color-grade-effect opacity="1" brightness="0.1" contrast="0.1" saturation="0.3" hue="0"></color-grade-effect>
@@ -90,6 +70,24 @@
     </model-viewer>
   </div>
 
+  <div class="card">
+    <model-viewer id="orbit2" interpolation-decay="200" src="Marble.glb"> </model-viewer>
+    <script>
+      (() => {
+        const modelViewer = document.getElementById('orbit2');
+        const orbitCycle = [
+          '45deg 55deg 4m',
+          '-60deg 110deg 2m',
+          modelViewer.cameraOrbit
+        ];
+        setInterval(() => {
+          const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+          modelViewer.cameraOrbit =
+            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+        }, 3000);
+      })();
+    </script>
+  </div>
 
   <footer>
     <span>Made possible <a href="https://github.com/GoogleWebComponents/model-viewer" target="_blank">&lt;model-viewer&gt;</a> web component.</span>
