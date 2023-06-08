@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>&lt;model-viewer&gt; example</title>
+  <title>Models</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-
-  <script defer src="https://cdn.jsdelivr.net/npm/es-module-shims@1.7.1/dist/es-module-shims.min.js"></script>
-
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/es-module-shims@1.7.1/dist/es-module-shims.min.js"></script> -->
   <script type="importmap">
       {
         "imports": {
@@ -17,7 +15,6 @@
         }
       }
     </script>
-
   <script type="module" src="model-viewer-module.min.js"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects@1.0.0/dist/model-viewer-effects.min.js"></script>
 
@@ -26,7 +23,7 @@
     <model-viewer src="Nerdo.glb" shadow-intensity="0" camera-controls camera-orbit="90deg 90deg 50m" auto-rotate>
       <effect-composer>
         <pixelate-effect opacity="1" granularity="12"></pixelate-effect>
-        <color-grade-effect opacity="1" brightness="0" contrast="0.1" saturation="0" hue="0"></color-grade-effect>
+        <color-grade-effect opacity="1" brightness="0.05" contrast="0.15" saturation="0" hue="0"></color-grade-effect>
         <!-- <outline-effect color="black" opacity="1" strength="10" smoothing="1"></outline-effect> -->
         <!-- <bloom-effect opacity="1" strength="0.6" threshold="0.85" radius="0.6" smoothing="0.025"></bloom-effect> -->
         <!-- <ssao-effect opacity="1" strength="2"></ssao-effect> -->
@@ -40,19 +37,6 @@
     </section>
   </div>
 
-  <div class="card">
-    <model-viewer src="Mana_Fantasy_Teamed_Portal.glb" shadow-intensity="0" camera-controls camera-orbit="45deg 95deg 80%" auto-rotate>
-      <effect-composer>
-        <color-grade-effect opacity="1" brightness="0.1" contrast="0.1" saturation="0.3" hue="0"></color-grade-effect>
-        <bloom-effect opacity="1" strength="0.9" threshold="0.6" radius="0.3" smoothing="0.025"></bloom-effect>
-      </effect-composer>
-    </model-viewer>
-  </div>
-
-  <div class="card">
-    <model-viewer src="ChainsawMan.glb" shadow-intensity="0" camera-controls camera-orbit="270deg 60deg 65%"> </model-viewer>
-  </div>
-
   <div class="card card2">
     <model-viewer src="my_pretty.glb" shadow-intensity="0" camera-controls camera-orbit="0deg 95deg 40%">
       <effect-composer>
@@ -61,11 +45,11 @@
     </model-viewer>
   </div>
 
-  <div class="card card3">
-    <model-viewer src="Easter_Island_dude.glb" shadow-intensity="0.2" disable-zoom camera-controls camera-orbit="0deg 100deg 120%">
+  <div class="card">
+    <model-viewer src="Mana_Fantasy_Teamed_Portal.glb" shadow-intensity="0" camera-controls camera-orbit="45deg 95deg 80%" auto-rotate>
       <effect-composer>
-        <color-grade-effect opacity="1" brightness="0" contrast="0.2" saturation="0" hue="0"></color-grade-effect>
-        <outline-effect color="black" opacity="1" strength="10" smoothing="1"></outline-effect>
+        <color-grade-effect opacity="1" brightness="0.1" contrast="0.1" saturation="0.3" hue="0"></color-grade-effect>
+        <bloom-effect opacity="1" strength="0.9" threshold="0.6" radius="0.3" smoothing="0.025"></bloom-effect>
       </effect-composer>
     </model-viewer>
   </div>
