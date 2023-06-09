@@ -1,0 +1,72 @@
+pre code.hljs,
+code[class*=language-],
+pre[class*=language-] {
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 0.8rem;
+    /* font-family: 'Jetbrains Mono', monospace;
+    font-size: 0.85rem; */
+    line-height: 1.5;
+    background: hsl(0, 0%, 12%);
+    color: hsl(0, 0%, 85%);
+    /* text-shadow: 0 1px rgba(0, 0, 0, .3); */
+}
+
+body {
+    margin: 5em;
+    gap: 2em;
+    display: grid;
+    place-items: center;
+    background-color: aliceblue;
+    color: white;
+    font-family: 'overpass', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.img-code {
+    max-width: 72em;
+    height: 24em;
+    gap: 2em;
+    padding: 2em;
+
+    border-radius: 2em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.img-code > img,
+.img-code > iframe {
+    width: 24em;
+    height: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+    object-fit: contain;
+    background-color: #1F1F1F;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.text-container h1 {
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+.text-container p {
+    margin: 0;
+    margin-bottom: 1em;
+    line-height: 150%;
+}
+
+.text-container a {
+    color: white;
+    font-weight: bold;
+}

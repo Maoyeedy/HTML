@@ -1,0 +1,60 @@
+pre {
+    margin: 0;
+    overflow: auto;
+    border-radius: 1em;
+}
+
+pre code.hljs {
+    display: block;
+    overflow: auto;
+    padding: .4em .8em;
+}
+
+.img-code {
+    background-color: black;
+}
+
+.hljs {}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-strong,
+.hljs-title {
+    /* font-weight: 700; */
+    color: hsl(338, 95%, 65%);
+}
+
+.hljs-comment {
+    color: hsl(0, 12%, 50%)
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-literal,
+.hljs-name,
+.hljs-quote,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-tag,
+.hljs-title,
+.hljs-type {
+    color: hsl(261, 95%, 75%)
+}
+
+.hljs-attribute,
+.hljs-bullet,
+.hljs-deletion,
+.hljs-link,
+.hljs-meta,
+.hljs-regexp,
+.hljs-subst,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+    color: hsl(25, 100%, 70%)
+}

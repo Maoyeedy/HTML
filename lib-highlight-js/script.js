@@ -13,10 +13,10 @@ fetch("2.cs")
         hljs.highlightAll();
     });
 
-fetch("3.cs")
-    .then(response => response.text())
-    .then(code => {
-        const codeContainer = document.getElementById("code-container3");
-        codeContainer.textContent = code;
-        hljs.highlightAll();
-    });
+// fetch("3.cs")
+//     .then(response => response.text())
+//     .then(code => {
+//         const codeContainer = document.getElementById("code-container3");
+//         codeContainer.textContent = code;
+//         hljs.highlightAll();
+//     });
