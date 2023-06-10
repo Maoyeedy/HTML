@@ -44,24 +44,24 @@ body {
 }
 
 @keyframes LeftToRight {
-    0% {
+    from {
         transform: translateX(-200%);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateX(0%);
         opacity: 1;
     }
 }
 
 @keyframes RightToLeft {
-    0% {
+    from {
         transform: translateX(200%);
         opacity: 0;
     }
 
-    100% {
+    to {
         transform: translateX(0%);
         opacity: 1;
     }

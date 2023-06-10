@@ -10,14 +10,13 @@ body {
     border-radius: 50%;
     position: absolute;
     left: 10vw;
-    transition: left 0.8s;
+    transition: left 0.75s;
 }
 
 .blue {
     background-color: blue;
     bottom: 10vw;
 }
-
 
 .red {
     background-color: red;

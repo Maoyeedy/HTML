@@ -1,6 +1,6 @@
 .hljs {
-    background: #1F1F1F;
-    color: #D9D9D9;
+    background-color: hsl(0, 5%, 95%);
+    color: #222;
 }
 
 .hljs-doctag,
@@ -10,8 +10,7 @@
 .hljs-selector-tag,
 .hljs-strong,
 .hljs-title {
-    /* font-weight: 700; */
-    color: hsl(338, 95%, 65%);
+    color: hsl(0, 100%, 40%);
 }
 
 .hljs-comment {
@@ -30,7 +29,7 @@
 .hljs-tag,
 .hljs-title,
 .hljs-type {
-    color: hsl(261, 95%, 75%)
+    color: hsl(0, 100%, 40%);
 }
 
 .hljs-attribute,
@@ -43,5 +42,5 @@
 .hljs-symbol,
 .hljs-template-variable,
 .hljs-variable {
-    color: hsl(25, 100%, 70%)
+    color: hsl(0, 100%, 40%);
 }

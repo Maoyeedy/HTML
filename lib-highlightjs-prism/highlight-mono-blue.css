@@ -1,5 +1,5 @@
 .hljs {
-    background: #fff;
+    background-color: hsl(210, 5%, 95%);
     color: #222;
 }
 
@@ -10,11 +10,11 @@
 .hljs-selector-tag,
 .hljs-strong,
 .hljs-title {
-    color: hsl(0, 100%, 40%);
+    color: hsl(210, 100%, 40%);
 }
 
 .hljs-comment {
-    color: hsl(0, 12%, 50%)
+    color: hsl(212, 12%, 50%);
 }
 
 .hljs-addition,
@@ -29,7 +29,7 @@
 .hljs-tag,
 .hljs-title,
 .hljs-type {
-    color: hsl(0, 100%, 40%);
+    color: hsl(210, 100%, 40%);
 }
 
 .hljs-attribute,
@@ -42,5 +42,5 @@
 .hljs-symbol,
 .hljs-template-variable,
 .hljs-variable {
-    color: hsl(0, 100%, 40%);
+    color: hsl(210, 100%, 40%);
 }
