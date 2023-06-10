@@ -5,39 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highlight JS Example</title>
+    <link rel="stylesheet" href="mono-blue.css">
     <link rel="stylesheet" href="min-dark.css">
-    <link rel="stylesheet" href="../lib-highlight-prism/style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #111;
+        }
+
+        pre {
+            width: 73ch;
+            height: 41ch;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="img-code">
-        <iframe src="https://www.youtube.com/embed/SgdVi4S9OjQ" title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div class="text-container">
-            <h1>Camera Zoom</h1>
-            <p><a href="https://www.notion.so/maoyeedy/Unity-59381f2fb86549c0a8c5c678366f1b3e">Link</a> The optimized CSS code eliminates unnecessary
-                properties, reorganizes the order of properties, and improves readability.</p>
-            <pre><code id="code-container1" class="csharp"></code></pre>
-        </div>
-    </div>
-
-    <div class="img-code">
-        <img src="typewritter.webp">
-        <div class="text-container">
-            <h1>Typewriter Dialog</h1>
-            <p><a href="https://www.notion.so/maoyeedy/Unity-59381f2fb86549c0a8c5c678366f1b3e">Link</a> Description</p>
-            <pre><code id="code-container2" class="csharp"></code></pre>
-        </div>
-    </div>
-
-    <!-- <div class="img-code">
-        <iframe src="https://blueprintue.com/render/msxh3_z1/" scrolling="no" allowfullscreen></iframe>
-        <div class="text-container">
-            <h1>Blueprint</h1>
-            <p><a href="https://www.notion.so/maoyeedy/Unity-59381f2fb86549c0a8c5c678366f1b3e">Link</a> Description</p>
-            <pre><code id="code-container3" class="csharp"></code></pre>
-        </div>
-    </div> -->
+    <pre><code id="cs1" class="language-csharp"></code></pre>
     <script defer src="highlight.min.js"></script>
     <script defer src="script.js"></script>
 </body>

@@ -7,16 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
-  <!-- <script defer src="https://cdn.jsdelivr.net/npm/es-module-shims@1.7.1/dist/es-module-shims.min.js"></script> -->
+  <script async src="es-module-shims.min.js"></script>
   <script type="importmap">
       {
         "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.152.1/build/three.module.min.js"
+          "three": "./three.module.min.js"
         }
       }
     </script>
-  <script type="module" src="model-viewer-module.min.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@beilinson/model-viewer-effects@1.0.0/dist/model-viewer-effects.min.js"></script>
+  <script type="module" src="model-viewer-no-three.min.js"></script>
+  <script type="module" src="model-viewer-effects.min.js"></script>
 
 <body>
   <div class="card card1">
@@ -58,10 +58,10 @@
     <model-viewer id="orbit2" interpolation-decay="200" src="Marble.glb"> </model-viewer>
     <script>
       (() => {
-        const modelViewer = document.getElementById('orbit2');
+        const modelViewer = document.getElementById("orbit2");
         const orbitCycle = [
-          '45deg 55deg 4m',
-          '-60deg 110deg 2m',
+          "45deg 55deg 4m",
+          "-60deg 110deg 2m",
           modelViewer.cameraOrbit
         ];
         setInterval(() => {
@@ -80,7 +80,7 @@
 
   <script>
     self.ModelViewerElement = self.ModelViewerElement || {};
-    self.ModelViewerElement.meshoptDecoderLocation = 'https://cdn.jsdelivr.net/npm/meshoptimizer@0.19.0/meshopt_decoder.min.js';
+    self.ModelViewerElement.meshoptDecoderLocation = "meshopt_decoder.min.js";
   </script>
 </body>
 

@@ -1,22 +1,7 @@
 fetch("1.cs")
     .then(response => response.text())
     .then(code => {
-        const codeContainer = document.getElementById("code-container1");
+        const codeContainer = document.getElementById("cs1");
         codeContainer.textContent = code;
+        hljs.highlightElement(codeContainer);
     });
-
-fetch("2.cs")
-    .then(response => response.text())
-    .then(code => {
-        const codeContainer = document.getElementById("code-container2");
-        codeContainer.textContent = code;
-        hljs.highlightAll();
-    });
-
-// fetch("3.cs")
-//     .then(response => response.text())
-//     .then(code => {
-//         const codeContainer = document.getElementById("code-container3");
-//         codeContainer.textContent = code;
-//         hljs.highlightAll();
-//     });

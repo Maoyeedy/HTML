@@ -1,20 +1,7 @@
-pre {
-    margin: 0;
-    overflow: auto;
-    border-radius: 1em;
+.hljs {
+    background: #1F1F1F;
+    color: #D9D9D9;
 }
-
-pre code.hljs {
-    display: block;
-    overflow: auto;
-    padding: .4em .8em;
-}
-
-.img-code {
-    background-color: black;
-}
-
-.hljs {}
 
 .hljs-doctag,
 .hljs-keyword,

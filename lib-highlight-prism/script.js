@@ -1,14 +1,11 @@
-fetch("1.cs")
-    .then(response => response.text())
-    .then(code => {
-        const codeContainer = document.getElementById("code-container1");
-        codeContainer.textContent = code;
-    });
+const fileNames = ["1.cs", "2.cs"];
 
-fetch("2.cs")
-    .then(response => response.text())
-    .then(code => {
-        const codeContainer = document.getElementById("code-container2");
-        codeContainer.textContent = code;
-        Prism.highlightAll();
-    });
+fileNames.forEach(fileName => {
+    fetch(fileName)
+        .then(response => response.text())
+        .then(code => {
+            const codeContainer = document.getElementById(`cs${fileName.charAt(0)}`);
+            codeContainer.textContent = code;
+            Prism.highlightElement(codeContainer);
+        });
+});
