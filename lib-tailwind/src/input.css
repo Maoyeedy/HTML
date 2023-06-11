@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h2 {
+        @apply text-xl;
+    }
+
+    h1,
+    h3 {
+        @apply leading-none m-0;
+    }
+
+    h1 {
+        @apply text-[2.4em] mb-[0.45em];
+    }
+
+    h3 {
+        @apply text-[1.2em] mb-[0.7em];
+    }
+
+    p {
+        @apply leading-normal m-0;
+    }
+
+    img {
+        @apply select-none block max-w-full object-cover;
+    }
+
+    audio,
+    canvas,
+    iframe,
+    img,
+    svg,
+    video {
+        @apply align-middle;
+    }
+
+    hr {
+        @apply block h-px mx-0 my-[1em] p-0 border-t-[#ccc] border-0 border-t border-solid;
+    }
+
+    ::selection {
+        color: white;
+        background: red;
+        text-shadow: none;
+    }
+}
+
+@layer components {
+    .btn-blue {
+        @apply bg-blue-500 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded;
+    }
+}
+
+@layer utilities {
+    .filter-none {
+        filter: none;
+    }
+
+    .filter-grayscale {
+        filter: grayscale(100%);
+    }
+}
