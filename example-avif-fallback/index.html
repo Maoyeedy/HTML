@@ -35,23 +35,23 @@
 <body>
     <h1>AVIF Fallback to WebP Example</h1>
     <picture>
-        <source srcset="/img/placeholder/1.avif" type="image/avif">
-        <source srcset="/img/placeholder/1.webp" type="image/webp">
-        <img src="/img/placeholder/1.avif">
+        <source srcset="/_img/placeholder/1.avif" type="image/avif">
+        <source srcset="/_img/placeholder/1.webp" type="image/webp">
+        <img src="/_img/placeholder/1.avif">
     </picture>
     <h2 id="result1">Currently showing Webp</h2>
     <h2 id="result2">Currently showing AVIF</h2>
 
     <script>
-        let img = document.querySelector('img');
-        let result1 = document.getElementById('result1');
-        let result2 = document.getElementById('result2');
+        let img = document.querySelector('img')
+        let result1 = document.getElementById('result1')
+        let result2 = document.getElementById('result2')
 
         img.addEventListener('load', function () {
             if (img.currentSrc.endsWith('.webp')) {
-                result1.style.display = 'block';
+                result1.style.display = 'block'
             } else {
-                result2.style.display = 'block';
+                result2.style.display = 'block'
             }
         });
     </script>
