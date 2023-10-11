@@ -8,20 +8,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 10vh 0;
         }
 
         .card {
-            color: white;
+            color: black;
             border-radius: 10px;
             padding: 20px;
-            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-            background-color: hsl(355, 80%, 50%);
-            filter: drop-shadow(hsl(355, 80%, 50%) 0.5rem 0.5rem 1rem);
+            background-color: white;
+            /* box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); */
+            filter: drop-shadow(rgba(0, 0, 0, 0.2) 10px 10px 20px);
         }
 
         ul {
+            /* max-width: 600px;
+            display: flex;
+            flex-wrap: wrap; */
             list-style: none;
             padding: 0;
         }
@@ -31,22 +34,19 @@
         }
 
         a {
-            /* color: #333; */
             text-decoration: none;
-            color: white;
+            color: black;
         }
 
         a:hover {
-            /* color: #007bff; */
-            color: black;
-            /* font-weight: bold; */
+            color: #007bff;
         }
     </style>
 </head>
 
 <body>
     <div class="card">
-        <h1>Folder Index</h1>
+        <h1>Index</h1>
         <ul>
             <script>
                 const folderNames = [
@@ -61,7 +61,7 @@
                     'example-letter-fade',
                     'example-parallex-minimal',
                     'homework-1',
-                    'homework-2',
+                    // 'homework-2',
                     'lib-animate-css',
                     'lib-highlightjs-prism',
                     'lib-lottie',
