@@ -55,7 +55,7 @@
             <script>
                 const folderNames = [
                     'example-animation-ease',
-                    'example-avif-comparison',
+                    'example-avif-compression',
                     'example-avif-fallback',
                     'example-card',
                     'example-imgtrack-sliding',
@@ -80,7 +80,7 @@
                 folderNames.forEach(folderName => {
                     const listItem = document.createElement('li')
                     const link = document.createElement('a')
-                    link.href = `/HTML/${folderName}/index.html`
+                    link.href = `${folderName}/index.html`
                     link.textContent = folderName
                     listItem.appendChild(link)
                     document.querySelector('ul').appendChild(listItem)
