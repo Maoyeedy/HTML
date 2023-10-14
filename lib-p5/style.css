@@ -1,4 +1,3 @@
-html,
 body {
   margin: 0;
   padding: 0;
@@ -8,20 +7,20 @@ body {
   background-size: cover;
 }
 
-.footer {
-  width: 100vw;
-  height: 55px;
-  background-color: rgb(245, 224, 80);
-  position: absolute;
-  bottom: 0;
-}
-
 .header {
   width: 100vw;
-  height: 55px;
+  height: 110px;
   background-color: rgb(245, 224, 80);
   position: absolute;
   top: 0;
+}
+
+.footer {
+  width: 100vw;
+  height: 110px;
+  background-color: rgb(245, 224, 80);
+  position: absolute;
+  bottom: 0;
 }
 
 canvas {
@@ -29,7 +28,7 @@ canvas {
   position: absolute;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 25%) scale(0.35);
+  transform: translate(-50%, 0%) scale(1);
   bottom: 100%;
-  transform: translate(-50%, 75%) scale(0.35);
+  transform: translate(-50%, 100%) scale(1);
 }
