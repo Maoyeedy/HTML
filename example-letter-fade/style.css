@@ -1,7 +1,12 @@
+:root {
+    --transition-time: 250ms;
+}
+
 body {
     height: 100vh;
-    margin: 0rem;
+    margin: 0;
     display: grid;
+    font-family: 'Barlow', sans-serif;
 }
 
 .container {
@@ -12,17 +17,17 @@ body {
 }
 
 .word {
-    font-family: 'Barlow', sans-serif;
     font-weight: 600;
     font-size: 2em;
     margin: 0.5em;
-    opacity: 1;
-    transition: opacity 400ms;
+    opacity: 0;
+    transition: opacity var(--transition-time);
 }
 
 .fancy {
+    opacity: 1;
     color: black;
-    transition: color 400ms;
+    transition: color var(--transition-time);
 }
 
 .fancy:hover {
