@@ -3,6 +3,10 @@
 
 <head>
     <title>Index</title>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" media="print" onload="this.media='all'">
     <style>
         body {
             display: flex;
@@ -60,7 +64,7 @@
                     'example-letter-explode',
                     'example-letter-fade',
                     'example-parallex-minimal',
-                    'homework-1',
+                    // 'homework-1',
                     // 'homework-2',
                     'lib-animate-css',
                     'lib-highlightjs-prism',
@@ -68,14 +72,15 @@
                     'lib-model-viewer',
                     'lib-motion-dev',
                     'lib-p5',
-                    'lib-postcss',
-                    'lib-tailwind'
+                    'lib-purecss',
+                    'lib-tailwind',
+                    'lib-typst'
                 ]
 
                 folderNames.forEach(folderName => {
                     const listItem = document.createElement('li')
                     const link = document.createElement('a')
-                    link.href = `/${folderName}/index.html`
+                    link.href = `/HTML/${folderName}/index.html`
                     link.textContent = folderName
                     listItem.appendChild(link)
                     document.querySelector('ul').appendChild(listItem)
