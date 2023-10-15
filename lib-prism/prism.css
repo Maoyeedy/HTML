@@ -7,7 +7,8 @@
     --white: hsl(0, 0%, 85%);
 }
 
-pre {
+code[class*="language-"],
+pre[class*="language-"] {
     background: #1f1f1f;
     text-align: left;
     white-space: pre;
