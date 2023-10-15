@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Unity Docs Syntax Hightligher Fork
 // @namespace   https://github.com/Maoyeedy
-// @version     1.2.3
+// @version     1.2.4
 // @author      Maoyeedy
 // @license     MIT
 // @description Adds syntax highlighting to the Unity Documentation. Forked from hyblocker.
@@ -24,10 +24,11 @@
 // @resource    PRISM_THEME_DARK  https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-one-dark.min.css
 //
 // Recommended Light Themes
-// https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css
+// https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css
 // https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-one-light.min.css
 //
 // Recommended Dark Themes
+// https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-one-dark.min.css
 // https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-xonokai.min.css
 // https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-duotone-dark.min.css
 // https://cdn.jsdelivr.net/gh/PrismJS/prism-themes/themes/prism-duotone-space.min.css
