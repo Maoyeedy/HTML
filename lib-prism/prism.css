@@ -1,5 +1,4 @@
 /* https://prismjs.com/download.html#themes=prism-okaidia&languages=clike+csharp&plugins=line-numbers+toolbar+download-button+match-braces  */
-
 :root {
     --red: hsl(338, 95%, 65%);
     --purple: hsl(261, 95%, 75%);
@@ -9,6 +8,7 @@
 }
 
 pre {
+    background: #1f1f1f;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -17,7 +17,6 @@ pre {
     tab-size: 4;
     -webkit-hyphens: none;
     hyphens: none;
-
     padding: .4em .8em;
     margin: 0;
 }
@@ -160,12 +159,10 @@ div.code-toolbar > .toolbar > .toolbar-item > button,
 div.code-toolbar > .toolbar > .toolbar-item > span {
     text-decoration: none;
     font-size: 0.8rem;
-
     background: rgba(224, 224, 224, .2);
     border-radius: .5em;
     color: hsl(0, 0%, 70%);
     font-weight: normal;
-
     padding: 0 .5em;
     padding-top: 0.15em;
 }
