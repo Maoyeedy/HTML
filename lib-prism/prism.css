@@ -9,7 +9,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-    background: #1f1f1f;
+    background: #1f1f1f !important;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
