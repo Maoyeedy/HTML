@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = {
     entry: './index.js',
@@ -24,6 +24,6 @@ module.exports = {
             directory: path.resolve(__dirname),
         },
         compress: true,
-        port: 8080,
+        port: 8081,
     },
-};
+}
