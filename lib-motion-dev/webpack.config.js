@@ -26,4 +26,8 @@ module.exports = {
         compress: true,
         port: 8081,
     },
+    // stats: {
+    //     warnings: true,
+    //     orphanModules: true
+    // }
 }
