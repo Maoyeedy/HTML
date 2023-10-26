@@ -1,0 +1,55 @@
+div.code-toolbar {
+    position: relative
+}
+
+div.code-toolbar > .toolbar {
+    position: absolute;
+    z-index: 10;
+    top: 1em;
+    right: .5em;
+    transition: opacity .3s ease-in-out;
+    opacity: 0
+}
+
+div.code-toolbar:hover > .toolbar,
+div.code-toolbar:focus-within > .toolbar {
+    opacity: 1
+}
+
+div.code-toolbar > .toolbar > .toolbar-item {
+    display: inline-block
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > button {
+    background: 0 0;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+    text-decoration: none;
+    font-size: 0.8rem;
+    background: rgba(224, 224, 224, .2);
+    border-radius: .5em;
+    color: hsl(0, 0%, 70%);
+    font-weight: normal;
+    padding: 0 .5em;
+    padding-top: 0.15em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover {
+    color: hsl(0, 0%, 95%);
+}
