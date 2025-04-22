@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>example-avif-comparison</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" media="print" onload="this.media='all'">
+    <style>
+        body {
+            font-family: Rubik, sans-serif;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const userAgent = navigator.userAgent
+            if (userAgent.includes("Edg")) {
+                document.getElementById("notice").classList.add("show")
+            }
+            const agentDiv = document.getElementById("agent")
+            agentDiv.innerHTML = `Your user agent is: <i>${userAgent}</i>`
+        };
+    </script>
+</head>
+
+<body>
+    <div id="agent"></div>
+    <div id="notice">You are now using Microsoft Edge.</div>
+</body>
+
+</html>
