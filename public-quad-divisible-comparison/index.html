@@ -46,35 +46,68 @@
             --divider-color: #ffa658;
             --default-handle-opacity: 0;
         }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
     </style>
 </head>
 
 <body>
-    <!-- <img-comparison-slider>
+    <div class="container">
+        <!-- <img-comparison-slider>
         <img slot="first" src="Before.png" />
         <img slot="second" src="After.png" />
     </img-comparison-slider> -->
-    <img-comparison-slider class="slider-example-split-line">
-        <figure slot="first" class="before">
-            <img width="100%" src="Before1.png">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img width="100%" src="After1.png">
-            <figcaption>After</figcaption>
-        </figure>
-    </img-comparison-slider>
+        <img-comparison-slider class="slider-example-split-line">
+            <figure slot="first" class="before">
+                <img width="100%" src="Before1.png">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img width="100%" src="After1.png">
+                <figcaption>After</figcaption>
+            </figure>
+        </img-comparison-slider>
 
-    <img-comparison-slider class="slider-example-split-line">
-        <figure slot="first" class="before">
-            <img width="100%" src="Before2.png">
-            <figcaption>Before</figcaption>
-        </figure>
-        <figure slot="second" class="after">
-            <img width="100%" src="After2.png">
-            <figcaption>After</figcaption>
-        </figure>
-    </img-comparison-slider>
+        <img-comparison-slider class="slider-example-split-line">
+            <figure slot="first" class="before">
+                <img width="100%" src="Before2.png">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img width="100%" src="After2.png">
+                <figcaption>After</figcaption>
+            </figure>
+        </img-comparison-slider>
+
+        <img-comparison-slider class="slider-example-split-line">
+            <figure slot="first" class="before">
+                <img width="100%" src="Before3.png">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img width="100%" src="After3.png">
+                <figcaption>After</figcaption>
+            </figure>
+        </img-comparison-slider>
+
+        <img-comparison-slider class="slider-example-split-line">
+            <figure slot="first" class="before">
+                <img width="100%" src="Before4.jpg">
+                <figcaption>Before</figcaption>
+            </figure>
+            <figure slot="second" class="after">
+                <img width="100%" src="After4.jpg">
+                <figcaption>After</figcaption>
+            </figure>
+        </img-comparison-slider>
+    </div>
+
 </body>
 
 </html>
